@@ -11,9 +11,9 @@ class Day extends Component {
 
   componentDidMount() {
       var today = new Date(),
-      imgSrc = 'https://vijaycs85.github.io/react-calendar/images/' + today.getFullYear() + '/' + today.getMonth() + '/' + today.getDate() + '.png';
+      imgSrc = 'https://vijaycs85.github.io/static-calendar/' + today.getFullYear() + '/' + today.getMonth() + '/' + today.getDate() + '.png';
       // Remove once added all images.
-      imgSrc = 'https://vijaycs85.github.io/react-calendar/images/2019/1/1.png';
+      imgSrc = 'https://vijaycs85.github.io/static-calendar/2019/1/1.png';
       this.setState({picture: <img src={imgSrc} />});
       console.log(imgSrc);
   }
