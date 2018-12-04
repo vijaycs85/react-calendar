@@ -10,20 +10,12 @@ class Day extends Component {
   }
 
   componentDidMount() {
-      fetch('https://randomuser.me/api?results=1')
-          .then(results =>{
-              return results.json();
-          }).then(data => {
-              let picture = data.results.map((pic) => {
-                  return (
-                      <div key={pic.results}>
-                          <img src={pic.picture.large} />
-                      </div>
-                  )
-          });
-          this.setState({picture: picture});
-              console.log("state", this.state.picture);
-          })
+      var today = new Date(),
+      imgSrc = 'https://vijaycs85.github.io/react-calendar/images/' + today.getFullYear() + '/' + today.getMonth() + '/' + today.getDate() + '.png';
+      // Remove once added all images.
+      imgSrc = 'https://vijaycs85.github.io/react-calendar/images/2019/1/1.png';
+      this.setState({picture: <img src={imgSrc} />});
+      console.log(imgSrc);
   }
 
   render() {
